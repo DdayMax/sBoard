@@ -12,11 +12,9 @@ import useSidebar from "../../hooks/useSidebar";
 import Header from "../../components/ui/Header/Header";
 import Footer from "../../components/ui/Footer/Footer";
 import BurgerBtn from "../../components/ui/Burger-button/BurgerBtn";
-// import { useRef } from "react";
 
 const MainPage = () => {
   const { isSidebarVisible, closeSidebar, toggleSidebar } = useSidebar();
-  // const observerRef = useRef<HTMLDivElement | null>(null);
 
   const pollListQuery = useQuery(
     {

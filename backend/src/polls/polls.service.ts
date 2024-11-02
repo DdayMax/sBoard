@@ -27,7 +27,7 @@ export class PollsService {
   async findAll(): Promise<Poll[]> {
     return this.pollsRepository.find({
       relations: ['options'],
-      order: { options: { id: 'ASC' } },
+      order: { options: { id: 'DESC' } },
     });
   }
 

@@ -6,6 +6,7 @@ import { useMutation } from "@tanstack/react-query";
 import { queryClient } from "../../queryClient";
 import FormField from "../ui/FormField/FormField";
 import { normalizeText } from "../../utils/normalizeText";
+import { NestJSHttpException } from "../../interfaces/NestJSHttpException";
 
 interface CreatePollFormProps {
   onSuccess: () => void;
@@ -16,6 +17,7 @@ const CreatePollForm: React.FC<CreatePollFormProps> = ({ onSuccess }) => {
     register,
     handleSubmit,
     reset,
+    setError,
     formState: { errors },
   } = useForm<CreatePoll>({
     resolver: zodResolver(CreatePollSchema),
@@ -30,6 +32,11 @@ const CreatePollForm: React.FC<CreatePollFormProps> = ({ onSuccess }) => {
         setOptions(["", ""]);
         reset();
         onSuccess();
+      },
+      onError: (error: NestJSHttpException) => {
+        error.message.forEach((err: string) => {
+          setError("question", { message: err });
+        });
       },
     },
     queryClient
