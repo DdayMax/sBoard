@@ -1,6 +1,5 @@
 # Poll Application
 
-
 ## Запуск с помощью Docker
 
 ### Требования
@@ -8,32 +7,35 @@
 - Установленный [Docker](https://www.docker.com/get-started)
 - Установленный [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Шаги для запуска
+### Инструкция
 
-1. В корневой папке проекта выполните команду:
+1. В корневой папке проекта выполните команду для сборки и запуска контейнеров:
 
    ```bash
    docker-compose up --build
+## После успешного запуска:
 
-## Запуск без Docker
+Фронтенд доступен по адресу: http://localhost:80
+Бэкенд доступен по адресу: http://localhost:3000
 
-### Шаги для запуска
+## Запуск без Docker:
 
-1. В корневой папке проекта выполните команду:
-
--backend:
-
-```bash
-cd backend
-npm install
-npm run start
-
-2. вернитесь в корневую папку
-
+1. В терминале перейдите в папку backend, установите зависимости и запустите сервер:
 
 ```bash
 cd frontend
 npm install
 npm run dev
+## 2. После успешного запуска, в отдельном терминале:
+
+cd frontend
+npm install
+npm run dev
+
+
+После запуска:
+
+Фронтенд доступен по адресу: http://localhost:5173
+Бэкенд доступен по адресу: http://localhost:3000
 
 
