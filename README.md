@@ -14,3 +14,26 @@
 
    ```bash
    docker-compose up --build
+
+## Запуск без Docker
+
+### Шаги для запуска
+
+1. В корневой папке проекта выполните команду:
+
+-backend:
+
+```bash
+cd backend
+npm install
+npm run start
+
+2. вернитесь в корневую папку
+
+
+```bash
+cd frontend
+npm install
+npm run dev
+
+
