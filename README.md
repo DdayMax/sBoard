@@ -22,20 +22,21 @@
 
 1. В терминале перейдите в папку backend, установите зависимости и запустите сервер:
 
-```bash
-cd frontend
-npm install
-npm run dev
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
 ## 2. После успешного запуска, в отдельном терминале:
-
-cd frontend
-npm install
-npm run dev
-
-
-После запуска:
+      ```bash
+      cd frontend
+      npm install
+      npm run dev
+## После запуска:
 
 Фронтенд доступен по адресу: http://localhost:5173
 Бэкенд доступен по адресу: http://localhost:3000
+
+Вся информация по API будет доступна по адресу:
+http://localhost:3000/api-docs
 
 
